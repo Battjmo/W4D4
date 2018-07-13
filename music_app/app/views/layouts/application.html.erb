@@ -10,13 +10,13 @@
   </head>
   <body>
       <nav class="main-nav">
-      <h1><a href="<%= users_url %>">Peep the music my person!</a></h1>
+      <h1 ><a href="<%= bands_url %>">Peep the music my person!</a></h1>
       <div>
       <% if current_user.nil? %>
-        <a href="<%= new_session_url %>">Sign in</a>
-        <a href="<%= new_user_url %>">Sign up</a>
+        <a id="rocks" href="<%= new_session_url %>">Sign in</a>
+        <a id="rocks" href="<%= new_user_url %>">Sign up</a>
       <% else %>
-        <%= current_user.email %>
+        <!-- <%#= current_user.email %> -->
         <form action="<%= session_url %>" method="post">
           <input
             type="hidden"

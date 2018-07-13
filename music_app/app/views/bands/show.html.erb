@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+  </head>
+  <body>
+
+<%= @band.name %>
+
+<a class="button" href="/bands/new">New band</a>
+<a class="button" href="/bands/<%=@band.id%>/edit">Edit band</a>
+
+<form action="<%= bands_url %>" method="post">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Kill this band">
+  </body>
+</html>

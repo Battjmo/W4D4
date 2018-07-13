@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :logged_in?
   helper_method :log_in_user!
+  helper_method :current_band
 
   def log_in_user!(user)
     @current_user = user
@@ -18,11 +19,15 @@ class ApplicationController < ActionController::Base
       session[:session_token] = nil
     end
 
-    
   def current_user
     return nil if session[:session_token].nil?
     @current_user ||= User.find_by(session_token: session[:session_token])
   end
+
+  def current_band
+    @band ||= Band.find_by(id: params[:id])
+  end
+
 
 
 end

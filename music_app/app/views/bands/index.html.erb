@@ -1,0 +1,19 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BANDS!</title>
+  </head>
+  <body> -->
+    <h1>CHECK OUT THESE BANDS DUDE!</h1>
+
+    <ul>
+      <% @bands.each do |band| %>
+        <li><a href="<%= band_url(band) %>"><%= band.name %></a></li>
+          <% end %>
+    </ul>
+
+
+    <a class="button" href="/bands/new">New band</a>
+  <!-- </body>
+</html> -->

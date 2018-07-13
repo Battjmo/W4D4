@@ -17,4 +17,17 @@
  h1 {
    font-size: 46;
    font-family: fantasy;
+   flex: auto;
+   padding-right: 40px;
+ }
+
+ #rocks {
+   flex:auto;
+   color: green;
+ }
+
+ li {
+   display: block;
+   padding-right: 400px;
+
  }
